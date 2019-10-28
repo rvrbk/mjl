@@ -1,0 +1,93 @@
+$scale-factor: 1;
+
+.car {
+    position: absolute;
+    width: 100px * $scale-factor;
+    height: 60px * $scale-factor;
+
+    .body {
+        position: absolute;
+        width: 100% * $scale-factor;
+        height: 20px * $scale-factor;
+        background-color: #000;
+
+        .body-back {
+            position: absolute;
+            border-radius: 2px;
+            left: -3px * $scale-factor;
+            width: 10px * $scale-factor;
+            height: 20px * $scale-factor;
+            background-color: #000;
+            transform: skew(-10deg);
+        }
+
+        .body-front {
+            position: absolute;
+            border-radius: 2px;
+            right: -5px * $scale-factor;
+            width: 10px * $scale-factor;
+            height: 20px * $scale-factor;
+            background-color: #000;
+            transform: skew(20deg);
+        }
+    }
+
+    .cockpit {
+        position: absolute;
+        bottom: 42px * $scale-factor;
+        left: 14px * $scale-factor;
+        width: 50% * $scale-factor;
+        height: 30px * $scale-factor;
+        background-color: #000;
+        
+        .cockpit-back {
+            position: absolute;
+            border-radius: 2px;
+            left: -3px * $scale-factor;
+            width: 10px * $scale-factor;
+            height: 20px * $scale-factor;
+            background-color: #000;
+            transform: skew(-10deg);
+        }
+
+        .cockpit-front {
+            position: absolute;
+            border-radius: 2px;
+            right: -5px * $scale-factor;
+            width: 10px * $scale-factor;
+            height: 20px * $scale-factor;
+            background-color: #000;
+            transform: skew(20deg);
+        }
+    }
+
+    .wheels {
+        position: absolute;
+        bottom: 25px * $scale-factor;
+        left: 5% * $scale-factor;
+        width: 90% * $scale-factor;
+        display: flex;
+        justify-content: space-between;
+
+        .wheel {
+            position: relative;
+            width: 25px * $scale-factor;
+            height: 25px * $scale-factor;
+            border-radius: 50%;
+            background-color: #000;
+            border-color: $yellow;
+            border-width: 2px;
+            border-style: solid;
+
+            .rim {
+                position: absolute;
+                width: 15px * $scale-factor;
+                height: 15px * $scale-factor;
+                background-color: $yellow;
+                border-radius: 50%;
+                left: 5px;
+                top: 5px;
+            }
+        }
+    }
+}

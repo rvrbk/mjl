@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+  </head>
+  <body>
+    <header>
+      {% include logo.html %}
+    </header>
+    <section class="visual">
+      <div class="banner">
+          {% include car.html %}
+      </div>
+    </section>
+    <section class="content">
+      <div class="text">
+        {{ content }}
+      </div>
+    </section>
+  </body>
+</html>
