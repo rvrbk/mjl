@@ -21,11 +21,11 @@ h2 { text-transform: uppercase; }
 
 html, body { margin: 0; padding: 0; font-family: 'Titillium Web', sans-serif; font-size: 1em; background-color: #f2e121; width: 100%; height: 100%; }
 
-html header, body header { display: flex; justify-content: center; }
+html header, body header { display: flex; justify-content: center; height: 130px; }
 
 html header .logo, body header .logo { position: relative; top: 40px; }
 
-html .visual, body .visual { position: relative; top: 70px; display: flex; justify-content: center; }
+html .visual, body .visual { position: relative; top: 70px; background-color: #000; display: flex; justify-content: center; }
 
 html .visual .banner, body .visual .banner { position: relative; width: 100%; height: 100px; border-top: 1px solid #000; border-bottom: 1px solid #000; }
 
@@ -88,17 +88,17 @@ html .content .text, body .content .text { width: 80%; max-width: 600px; margin-
 
 .car { position: absolute; width: 100px; height: 60px; }
 
-.car .body { position: absolute; width: 100%; height: 20px; background-color: #000; }
+.car .body { position: absolute; width: 100%; height: 20px; background-color: #f2e121; }
 
-.car .body .body-back { position: absolute; border-radius: 2px; left: -3px; width: 10px; height: 20px; background-color: #000; transform: skew(-10deg); }
+.car .body .body-back { position: absolute; border-radius: 2px; left: -3px; width: 10px; height: 20px; background-color: #f2e121; transform: skew(-10deg); }
 
-.car .body .body-front { position: absolute; border-radius: 2px; right: -5px; width: 10px; height: 20px; background-color: #000; transform: skew(20deg); }
+.car .body .body-front { position: absolute; border-radius: 2px; right: -5px; width: 10px; height: 20px; background-color: #f2e121; transform: skew(20deg); }
 
-.car .cockpit { position: absolute; bottom: 42px; left: 14px; width: 50%; height: 30px; background-color: #000; }
+.car .cockpit { position: absolute; bottom: 42px; left: 14px; width: 50%; height: 30px; background-color: #f2e121; }
 
-.car .cockpit .cockpit-back { position: absolute; border-radius: 2px; left: -3px; width: 10px; height: 20px; background-color: #000; transform: skew(-10deg); }
+.car .cockpit .cockpit-back { position: absolute; border-radius: 2px; left: -3px; width: 10px; height: 20px; background-color: #f2e121; transform: skew(-10deg); }
 
-.car .cockpit .cockpit-front { position: absolute; border-radius: 2px; right: -5px; width: 10px; height: 20px; background-color: #000; transform: skew(20deg); }
+.car .cockpit .cockpit-front { position: absolute; border-radius: 2px; right: -5px; width: 10px; height: 20px; background-color: #f2e121; transform: skew(20deg); }
 
 .car .wheels { position: absolute; bottom: 25px; left: 5%; width: 90%; display: flex; justify-content: space-between; }
 
@@ -108,7 +108,7 @@ html .content .text, body .content .text { width: 80%; max-width: 600px; margin-
 
 .cloud { position: absolute; width: 200px; }
 
-.cloud .mist { position: relative; height: 1px; border-bottom: 1px solid #000; }
+.cloud .mist { position: relative; height: 1px; border-bottom: 1px solid #f2e121; }
 
 .cloud .mist:nth-child(1) { width: 50%; left: 30%; }
 
