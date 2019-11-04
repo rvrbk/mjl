@@ -1,5 +1,20 @@
 $scale-factor: 0.2;
 
+@keyframes growdown {
+  from { opacity: 0; height: 0px; }
+  to { opacity: 1; height: 293px * $scale-factor; }
+}
+
+@keyframes growup {
+  from { opacity: 0; top: 293px * $scale-factor; height: 0px; }
+  to { opacity: 1; top: 0; height: 293px * $scale-factor; }
+}
+
+@keyframes growupj {
+  from { opacity: 0; top: 528px * $scale-factor; height: 0px; }
+  to { opacity: 1; top: 0; height: 528px * $scale-factor; }
+}
+
 .logo {
     display: flex;  
 
@@ -7,11 +22,22 @@ $scale-factor: 0.2;
       margin-right: 39px * $scale-factor;
       
       .beam {
+        position: relative;
         background-color: #000;
         flex-shrink: 0;
         width: 49px * $scale-factor;
         height: 293px * $scale-factor;
         margin-right: 39px * $scale-factor;
+        
+        animation-delay: 1s;
+
+        &:nth-child(even) {
+          animation: growup 1s;
+        }
+
+        &:nth-child(odd) {
+          animation: growdown 1s;
+        }
       }
 
       .point {
@@ -40,6 +66,7 @@ $scale-factor: 0.2;
 
       .beam {
         height: 528px * $scale-factor;
+        animation: growupj 1s !important;
       }
     }
 

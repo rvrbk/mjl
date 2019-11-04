@@ -25,7 +25,7 @@ html header, body header { display: flex; justify-content: center; }
 
 html header .logo, body header .logo { position: relative; top: 40px; }
 
-html .visual, body .visual { position: relative; top: 70px; display: flex; justify-content: center; }
+html .visual, body .visual { position: relative; margin-top: 70px; display: flex; justify-content: center; }
 
 html .visual .banner, body .visual .banner { position: relative; width: 100%; height: 100px; border-top: 1px solid #000; border-bottom: 1px solid #000; }
 
@@ -45,11 +45,34 @@ html .content, body .content { position: relative; display: flex; justify-conten
 
 html .content .text, body .content .text { width: 80%; max-width: 600px; margin-top: 120px; text-align: center; }
 
+@keyframes growdown { from { opacity: 0;
+    height: 0px; }
+  to { opacity: 1;
+    height: 58.6px; } }
+
+@keyframes growup { from { opacity: 0;
+    top: 58.6px;
+    height: 0px; }
+  to { opacity: 1;
+    top: 0;
+    height: 58.6px; } }
+
+@keyframes growupj { from { opacity: 0;
+    top: 105.6px;
+    height: 0px; }
+  to { opacity: 1;
+    top: 0;
+    height: 105.6px; } }
+
 .logo { display: flex; }
 
 .logo .logo-part { margin-right: 7.8px; }
 
-.logo .logo-part .beam { background-color: #000; flex-shrink: 0; width: 9.8px; height: 58.6px; margin-right: 7.8px; }
+.logo .logo-part .beam { position: relative; background-color: #000; flex-shrink: 0; width: 9.8px; height: 58.6px; margin-right: 7.8px; animation-delay: 1s; }
+
+.logo .logo-part .beam:nth-child(even) { animation: growup 1s; }
+
+.logo .logo-part .beam:nth-child(odd) { animation: growdown 1s; }
 
 .logo .logo-part .point { background-color: #000; width: 9.8px; height: 9.8px; margin-bottom: 7.8px; }
 
@@ -59,7 +82,7 @@ html .content .text, body .content .text { width: 80%; max-width: 600px; margin-
 
 .logo .logo-j { display: flex; flex-direction: column; width: 9.8px; }
 
-.logo .logo-j .beam { height: 105.6px; }
+.logo .logo-j .beam { height: 105.6px; animation: growupj 1s !important; }
 
 .logo .logo-l { display: flex; width: 9.8px; }
 
