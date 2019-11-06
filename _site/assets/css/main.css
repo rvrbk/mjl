@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Titillium+Web&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web|Baloo+Bhai&display=swap");
 @keyframes drive { 0% { left: 25%; }
   25% { left: 37%; }
   43% { left: 68%; }
@@ -21,11 +21,11 @@ h2 { text-transform: uppercase; }
 
 html, body { margin: 0; padding: 0; font-family: 'Titillium Web', sans-serif; font-size: 1em; background-color: #f2e121; width: 100%; height: 100%; }
 
-html header, body header { display: flex; justify-content: center; height: 130px; }
+html header, body header { display: flex; justify-content: center; height: 190px; }
 
 html header .logo, body header .logo { position: relative; top: 40px; }
 
-html .visual, body .visual { position: relative; top: 70px; background-color: #000; display: flex; justify-content: center; }
+html .visual, body .visual { position: relative; background-color: #000; display: flex; justify-content: center; }
 
 html .visual .banner, body .visual .banner { position: relative; width: 100%; height: 100px; border-top: 1px solid #000; border-bottom: 1px solid #000; }
 
@@ -41,9 +41,17 @@ html .visual .banner .cloud:nth-child(2), body .visual .banner .cloud:nth-child(
 
 html .visual .banner .cloud:nth-child(3), body .visual .banner .cloud:nth-child(3) { top: 30px; margin-left: -270px; }
 
-html .content, body .content { position: relative; display: flex; justify-content: center; }
+html .content, body .content { position: relative; display: flex; padding-top: 19px; justify-content: center; }
 
-html .content .text, body .content .text { width: 80%; max-width: 600px; margin-top: 120px; text-align: center; }
+html .content .text, body .content .text { width: 30%; padding-right: 15px; text-align: right; }
+
+html .content .social, body .content .social { width: 30%; padding-left: 15px; padding-top: 25px; }
+
+html .content .social ul, body .content .social ul { list-style: none; margin: 0; padding: 0; }
+
+html .content .social ul li, body .content .social ul li { float: left; }
+
+html .content .social ul li a, body .content .social ul li a { display: block; font-family: 'Baloo Bhai', cursive; font-size: 1.6em; text-decoration: none; width: 60px; height: 60px; line-height: 62px; margin-right: 15px; border-radius: 50%; text-align: center; background-color: #000; color: #f2e121; }
 
 @keyframes growdown { from { opacity: 0;
     height: 0px; }
@@ -64,6 +72,9 @@ html .content .text, body .content .text { width: 80%; max-width: 600px; margin-
     top: 0;
     height: 105.6px; } }
 
+@keyframes fadein { from { opacity: 0; }
+  to { opacity: 1; } }
+
 .logo { display: flex; }
 
 .logo .logo-part { margin-right: 7.8px; }
@@ -74,7 +85,7 @@ html .content .text, body .content .text { width: 80%; max-width: 600px; margin-
 
 .logo .logo-part .beam:nth-child(odd) { animation: growdown 1s; }
 
-.logo .logo-part .point { background-color: #000; width: 9.8px; height: 9.8px; margin-bottom: 7.8px; }
+.logo .logo-part .point { opacity: 0; background-color: #000; width: 9.8px; height: 9.8px; margin-bottom: 7.8px; animation: fadein 0.3s; animation-delay: 1s; animation-fill-mode: forwards; }
 
 .logo .logo-m { display: flex; width: 45.8px; }
 
